@@ -15,17 +15,17 @@ cd ${TOP_DIR}/intel-vaapi-driver
 make -j8
 make install
 
-#echo "Build ffmpeg ..."
-#cd ${TOP_DIR}/ffmpeg
-#./configure --prefix=\$VAAPI_PREFIX --enable-avformat
-#make -j8 
-#make install
-
 echo "Build ffmpeg_libyami ..."
 cd ${TOP_DIR}/ffmpeg_libyami
-./configure --prefix=\$VAAPI_PREFIX --enable-libyami --disable-doc --disable-stripping  --enable-debug=3 --enable-version3
+./configure --prefix=$FFMPEG_PREFIX --enable-libyami --disable-doc --disable-stripping  --enable-debug=3 --enable-version3
 make -j8 
 make install
+
+#echo "Build ffmpeg ..."
+#cd ${TOP_DIR}/ffmpeg
+#./configure --prefix=$VAAPI_PREFIX --enable-avformat
+#make -j8 
+#make install
 
 echo "Build libyami ..."
 cd ${TOP_DIR}/libyami
