@@ -1,0 +1,15 @@
+prefix=/opt/yami/vaapi
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libyami
+Description: Intel open source media infrastructure base on libva.
+Version: 0.4.2
+Requires: libva >= 0.37 \
+          libva-drm \
+          libva-x11 \
+          x11
+Libs: -L${libdir} -lyami
+Libs.private: -Wl,--whole-archive -lyami -Wl,--no-whole-archive
+Cflags: -I${includedir}/libyami
