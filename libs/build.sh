@@ -29,12 +29,12 @@ make install
 
 echo "Build libyami ..."
 cd ${TOP_DIR}/libyami
-./autogen.sh --prefix=$VAAPI_PREFIX
+./autogen.sh --prefix=$LIBYAMI_PREFIX
 make -j8
 make install
 
 echo "Build libyami-utils ..."
 cd ${TOP_DIR}/libyami-utils
-./autogen.sh --prefix=$VAAPI_PREFIX
+./autogen.sh --prefix=$LIBYAMI_PREFIX
 make -j8
 make install
