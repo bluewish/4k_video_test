@@ -7,7 +7,7 @@ fi
 
 export VAAPI_PREFIX="${YAMI_ROOT_DIR}/vaapi"
 export LIBYAMI_PREFIX="${YAMI_ROOT_DIR}/libyami"
-export FFMPEG_PREFIX="${YAMI_ROOT_DIR}/libyami"
+export FFMPEG_PREFIX="${YAMI_ROOT_DIR}/ffmpeg"
 ADD_PKG_CONFIG_PATH="${VAAPI_PREFIX}/lib/pkgconfig/:${LIBYAMI_PREFIX}/lib/pkgconfig/"
 ADD_LD_LIBRARY_PATH="${VAAPI_PREFIX}/lib/:${LIBYAMI_PREFIX}/lib/:${FFMPEG_PREFIX}/lib/"
 ADD_PATH="${VAAPI_PREFIX}/bin/:${LIBYAMI_PREFIX}/bin/:${FFMPEG_PREFIX}/bin/"
